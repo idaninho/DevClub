@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body::after {
+  content: "";
+  width: 20%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("./images/bg-top.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+body::before {
+  content: "";
+  width: 30%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: url("./images/bg-bottom.svg");
+  background-size: cover;
+  z-index: -1;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #494b5a;
+  top: 0;
+  margin-bottom: 20px;
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+li {
+  font-size: 14px;
+  font-weight: 500;
+  color: #494b5a;
+  border-top: 2px solid #e3e3e3;
+  width: 20vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+li:last-child {
+  border-bottom: 2px solid #e3e3e3;
+}
+
+section {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section > div {
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+  margin-bottom: 60px;
+  height: 25rem;
+  padding: 5rem;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background: hsl(240, 78%, 98%);
+  border-radius: 1rem;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3), 0px 20px 48px rgba(0, 0, 0, 0.7);
+}
+
+.chosen {
+  background: #777ce9;
+  color: #fff;
+  transform: scale(1.2);
+  align-items: center;
+}
+
+.chosen ul li {
+  color: #fff;
+}
+.chosen > p {
+  color: #fff;
+}
+.price-card__content {
+  width: 20vw;
+}
+
+.price-card__content > a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.4rem;
+  margin: 20px;
+  text-align: center;
+  background: #7f84eb;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: 1px solid #8e92e9;
+}
+
+.chosen .price-card__content a {
+  background: #fff;
+  color: #8e92e9;
+  border: 1px solid #fff;
+}
+
+a:hover {
+  color: #8e92e9;
+  background: transparent;
+}
+
+.price-card__price-monthly {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  bottom: 3rem;
+}
+
+.price-card__header {
+  top: 0;
+  text-align: center;
+}
+
+.headline {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #6d718c;
+}
+
+.price-toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  max-width: 200px;
+  margin-bottom: 60px;
+  color: #6d718c;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+}
+
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #494b5a;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #8e92e9;
+}
+
+input:checked + .slider:before {
+  transform: translateX(29px);
+}
+
+label:checked ~ .test {
+  opacity: 0;
+}
+
+.slider.circle {
+  border-radius: 30px;
+}
+
+.slider.circle:before {
+  border-radius: 50%;
+}
+
+.price-card__price-monthly,
+.price-card__price-annualy {
+  color: #494b5a;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.price-card__price-monthly {
+  display: none;
+}
+.price-card__price-annualy {
+  display: block;
+}
+.price-chosen {
+  color: #fff;
+}
+
+.price-card__price-monthly span {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-right: 5px;
+  vertical-align: middle;
+}
